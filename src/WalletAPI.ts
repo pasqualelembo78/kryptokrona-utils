@@ -121,7 +121,7 @@ export class WalletAPI extends HTTPClient {
         filename: string,
         password: string,
         daemonHost = '127.0.0.1',
-        daemonPort = 11898,
+        daemonPort = 17081,
         daemonSSL = false
     ): Promise<void> {
         return this.post(
@@ -230,7 +230,7 @@ t     * Deletes a previous prepared transaction
         daemonSSL?: boolean
     ): Promise<void> {
         daemonHost = daemonHost || '127.0.0.1';
-        daemonPort = daemonPort || 11898;
+        daemonPort = daemonPort || 17081;
         daemonSSL = daemonSSL || false;
 
         return this.post('wallet/import/key', {
@@ -265,7 +265,7 @@ t     * Deletes a previous prepared transaction
         daemonSSL?: boolean
     ): Promise<void> {
         daemonHost = daemonHost || '127.0.0.1';
-        daemonPort = daemonPort || 11898;
+        daemonPort = daemonPort || 17081;
         daemonSSL = daemonSSL || false;
 
         return this.post('wallet/import/seed', {
@@ -312,7 +312,7 @@ t     * Deletes a previous prepared transaction
         daemonSSL?: boolean
     ): Promise<void> {
         daemonHost = daemonHost || '127.0.0.1';
-        daemonPort = daemonPort || 11898;
+        daemonPort = daemonPort || 17081;
         daemonSSL = daemonSSL || false;
 
         return this.post('wallet/import/view', {
@@ -381,7 +381,7 @@ t     * Deletes a previous prepared transaction
         daemonSSL?: boolean
     ): Promise<void> {
         daemonHost = daemonHost || '127.0.0.1';
-        daemonPort = daemonPort || 11898;
+        daemonPort = daemonPort || 17081;
         daemonSSL = daemonSSL || false;
 
         return this.post('wallet/open', { daemonHost, daemonPort, daemonSSL, filename, password });
